@@ -64,8 +64,11 @@
                   break;
                 }
                 case "getBattery": {
-                  tmp = $( "<div>" + i + " : <span>" + val() + "</span>" )
-                  .appendTo( $('#debug') );
+                  val().then(function(bat) {
+                    tmp = $( "<div>" + i + " : <span>" + bat.level + "</span>" )
+                  .appendTo( tmp );
+                  })
+                  
                   break;
                 }
               }

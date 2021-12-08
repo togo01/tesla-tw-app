@@ -52,8 +52,23 @@
             })
             
             jQuery.each( navigator, function( i, val ) {
-              $( "<div>" + i + " : <span>" + val + "</span>" )
+              tmp = $( "<div>" + i + " : <span>" + val + "</span>" )
               .appendTo( $('#debug') );
+
+              switch (i) {
+                case "geolocation": {
+                  navigator.geolocation.getCurrentPosition(function(pos) {
+                  $( "<div>" + "getCurrentPosition" + " : <span>" + pos.coords.latitude + ", " + pos.coords.longitude + "</span>" )
+                      .appendTo( tmp );
+                  })
+                  break;
+                }
+                case "getBattery": {
+                  tmp = $( "<div>" + i + " : <span>" + val() + "</span>" )
+                  .appendTo( $('#debug') );
+                  break;
+                }
+              }
             });
         })
     </script>

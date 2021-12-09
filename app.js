@@ -27,9 +27,8 @@ $(function(){
     setInterval(UpdateClock, 1000)
 
     function UpdateClock () {
-        var now = new Date()
-        $("#clock-hour").text(now.getHours())
-        $("#clock-minute").text(now.getMinutes().toString().padStart(2, "0"))
+        $("#clock-hour").text(moment().utc().utcOffset(8).format("h"))
+        $("#clock-minute").text(moment().utc().utcOffset(8).format("mm"))
     }
 
 })

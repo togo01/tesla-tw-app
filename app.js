@@ -1,3 +1,9 @@
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8JD2SP0CDZ');
+
 $(function(){
     if (navigator.userAgent.includes("Tesla")) {
 

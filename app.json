@@ -7,13 +7,14 @@
         { "name": "firDay影音", "icon_url": "img/firday.png", "link": "https://video.friday.tw", "jump": true },
         { "name": "HBO GO", "icon_url": "img/hbo_go.png", "link": "https://www.hbogoasia.tw", "jump": true },
         { "name": "Amazon", "icon_url": "img/amazon_prime_video.png", "link": "https://www.primevideo.com", "jump": true },
-        { "name": "巴哈姆特動畫瘋", "icon_url": "img/ani_gamer.png", "link": "https://ani.gamer.com.tw/", "jump": true },
+        { "name": "巴哈動畫瘋", "icon_url": "img/ani_gamer.png", "link": "https://ani.gamer.com.tw/", "jump": true },
         { "name": "KKTV", "icon_url": "img/kktv.jpg", "link": "https://www.kktv.me", "jump": true },
         { "name": "LINE TV", "icon_url": "img/line_tv.png", "link": "https://www.linetv.tw", "jump": true },
         { "name": "CATCHPLAY+", "icon_url": "img/catchplay_plus.png", "link": "https://www.catchplay.com/tw", "jump": true },
         { "name": "LiTV", "icon_url": "img/litv.png", "link": "https://www.litv.tv", "jump": true },
         { "name": "myVideo", "icon_url": "img/my_video.png", "link": "https://www.myvideo.net.tw", "jump": true },
-        { "name": "Hami Video", "icon_url": "img/hami_video.png", "link": "https://hamivideo.hinet.net", "jump": true }
+        { "name": "Hami Video", "icon_url": "img/hami_video.png", "link": "https://hamivideo.hinet.net", "jump": true },
+        { "name": "MOD", "icon_url": "img/mod.png", "link": "https://modweb.cht.com.tw", "jump": true }
         
     ]
 }

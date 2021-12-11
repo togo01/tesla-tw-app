@@ -124,10 +124,10 @@ body, html {
 }
 
 .app {
-    width: 128px;
+    width: 100px;
     height: 150px;
     display: inline-block;
-    margin: 10px;
+    margin: 10px 15px;
 }
 
 .app .app-icon {

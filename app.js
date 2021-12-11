@@ -1,5 +1,5 @@
 $(function(){
-    if (navigator.userAgent.includes("Tesla")) {
+    if (navigator.userAgent.includes("Tesla") || window.location.hostname == "localhost") {
 
       $(".pc").remove();
 

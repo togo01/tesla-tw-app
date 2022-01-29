@@ -1,0 +1,15 @@
+<script lang="javascript">
+    
+    navigator.mediaDevices.getUserMedia({
+        audio: true
+    }).then(function(stream) {
+        var audio = new AudioContext()
+        var mic = audio.createMediaStreamSource(stream)
+        var dist = audio.destination
+        mic.connect(dist)
+    })
+
+    
+
+
+</script>

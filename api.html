@@ -5,14 +5,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             for (const key in navigator) {
-                $("#apis").append("<p>" + key + "</p>")
-                const element = navigator[key];
-                for (const key2 in element) {
-                    $("#apis").append("<p> - " + key2 + "</p>")
+                $("#apis").append("<p>" + key + ":" + typeof(navigator[key]) + " = " + navigator[key] + "</p>")
+                if (typeof(navigator[key]) != "string") 
+                {
+                    const element = navigator[key];
+                    for (const key2 in element) {
+                        $("#apis").append("<p><span style=\"width: 50px; display:inline-block;\"></span><span> - " + key2 + " -> " + element[key2] + "</span></p>")
+                    }
                 }
             }
-
-            navigator.mediaSession.setMicrophoneActive()
         </script>
 
     </body>

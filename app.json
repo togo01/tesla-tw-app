@@ -1,7 +1,7 @@
 {
     "apps": [
         { "name": "Netflix", "icon_url": "img/netflix.png", "link": "https://www.netflix.com/tw/", "jump": false },
-        { "name": "Disney+", "icon_url": "img/disney_plus.png", "link": "https://www.disneyplus.com/zh-hant", "jump": true },
+        { "name": "Disney+", "icon_url": "img/disney_plus.png", "link": "https://www.disneyplus.com/zh-hant/home", "jump": true },
         { "name": "BiliBili", "icon_url": "img/bilibili.png", "link": "https://www.bilibili.com", "jump": true },
         { "name": "Apple TV+", "icon_url": "img/apple_tv_plus.png", "link": "https://tv.apple.com/tw", "jump": true },
         { "name": "愛奇藝", "icon_url": "img/iqy.png", "link": "https://www.iq.com", "jump": true },

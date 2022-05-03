@@ -3,7 +3,7 @@ $(function(){
 
       $(".pc").remove();
 
-      $.getJSON("app.json", function(data){
+      $.getJSON("app.json?t=" + Date.now(), function(data){
         $.each(data.apps, function(i, v) {
           app = $("<div class=\"app\"></div>" ).appendTo($(".app-container"))
           icon = $("<img class=\"app-icon\">").appendTo(app)

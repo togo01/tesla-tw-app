@@ -17,6 +17,8 @@
         { "name": "myVideo", "icon_url": "img/my_video.png", "link": "https://www.myvideo.net.tw", "jump": true },
         { "name": "Hami Video", "icon_url": "img/hami_video.png", "link": "https://hamivideo.hinet.net", "jump": true },
         { "name": "MOD", "icon_url": "img/mod.png", "link": "https://modweb.cht.com.tw", "jump": true },
-        { "name": "UBTV", "icon_url": "img/ubtv.png", "link": "http://www.ub1818.com", "jump": true }
+        { "name": "UBTV", "icon_url": "img/ubtv.png", "link": "http://www.ub1818.com", "jump": true },
+        { "name": "WeTV", "icon_url": "img/wetv.png", "link": "https://wetv.vip/zh-tw/", "jump": true },
+        { "name": "パ・リーグ", "icon_url": "img/pacificleague.jpg", "link": "https://tv.pacificleague.jp/", "jump": true }
     ]
 }

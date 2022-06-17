@@ -2,9 +2,12 @@
 
 
 <body style="background-color: gray;">
+    <button onclick="USBRequest()">USB Request</button>
+    <button onclick="ActiveMicrophone()">Active Microphone</button>
     <div id="apis"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script data-consolejs-channel="4c658565-2375-2394-f59a-2ff0d85fe08b" src="https://remotejs.com/agent/agent.js"></script>
+    <script data-consolejs-channel="4c658565-2375-2394-f59a-2ff0d85fe08b"
+        src="https://remotejs.com/agent/agent.js"></script>
     <script>
         for (const key in navigator) {
             $("#apis").append("<p>" + key + ":" + typeof (navigator[key]) + " = " + navigator[key] + "</p>")
@@ -14,6 +17,43 @@
                     $("#apis").append("<p><span style=\"width: 50px; display:inline-block;\"></span><span> - " + key2 + " -> " + element[key2] + "</span></p>")
                 }
             }
+        }
+
+        function USBRequest() {
+            const filters = [
+                { vendorId: 0x0909, productId: 0x004e }
+            ];
+            navigator.usb.requestDevice({ filters: filters })
+                .then(usbDevice => {
+                    console.log("Product name: " + usbDevice.productName);
+                    navigator.usb.getDevices()
+                        .then(devices => {
+                            console.log("Total devices: " + devices.length);
+                            devices.forEach(device => {
+                                console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
+                                device.open().then(function() { 
+
+                                    console.log("Open!")
+                                })
+                            });
+                        });
+                })
+                .catch(e => {
+                    console.log("There is no device. " + e);
+                });
+        }
+
+        function ActiveMicrophone() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function () {
+                    console.log("Allow");
+                })
+                .catch(function () {
+                    console.log("Not Allow");
+                });
+
+            AudioContext = window.AudioContext || window.webkitAudioContext;
+            audioContent = new AudioContext();
         }
     </script>
 

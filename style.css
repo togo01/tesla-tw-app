@@ -125,8 +125,8 @@ body, html {
 }
 
 .app {
-    width: 100px;
-    height: 150px;
+    width: 90px;
+    height: 130px;
     display: inline-block;
     margin: 10px 15px;
 }
@@ -141,6 +141,7 @@ body, html {
 }
 
 .app .app-name {
+    font-size: small;
     color: white;
     line-height: 35px;
 }

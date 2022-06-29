@@ -18,6 +18,7 @@
         { "name": "Hami Video", "icon_url": "img/hami_video.png", "link": "https://hamivideo.hinet.net", "jump": true },
         { "name": "TikTok", "icon_url": "img/tiktok.png", "link": "https://www.tiktok.com/", "jump": true },
         { "name": "MOD", "icon_url": "img/mod.png", "link": "https://modweb.cht.com.tw", "jump": true },
+        { "name": "Youtube Kids", "icon_url": "img/youtubekids.png", "link": "https://www.youtubekids.com/", "jump": true },
         { "name": "UBTV", "icon_url": "img/ubtv.png", "link": "http://www.ub1818.com", "jump": true },
         { "name": "UB影視", "icon_url": "img/ubtv_new.png", "link": "http://vvv.ub1818.com", "jump": true },
         { "name": "WeTV", "icon_url": "img/wetv.png", "link": "https://wetv.vip/zh-tw/", "jump": true },

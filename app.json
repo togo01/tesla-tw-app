@@ -25,6 +25,7 @@
         { "name": "パ・リーグ", "icon_url": "img/pacificleague.jpg", "link": "https://tv.pacificleague.jp/", "jump": true },
         { "name": "中國人線上看", "icon_url": "img/langlangbay.png", "link": "https://langlangbay.org/", "jump": true },
         { "name": "小鴨影音", "icon_url": "img/777tv.png", "link": "https://777tv.app/", "jump": true },
+        { "name": "泥視頻", "icon_url": "img/nivod.png", "link": "https://www.nivod.tv/", "jump": true },
         { "name": "RetroGames", "icon_url": "img/retrogames.png", "link": "https://www.retrogames.cc/", "jump": true }
     ]
 }

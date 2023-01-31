@@ -92,8 +92,8 @@ body, html {
 }
 
 .clock .clock-card {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     background-color: rgb(25, 25, 25);
     border-radius: 30px;
     display: inline-block;
@@ -101,7 +101,7 @@ body, html {
 }
 
 .clock .clock-text {
-    font-size: 200px;
+    font-size: 160px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(240, 240, 240);
     text-align: center;
@@ -112,7 +112,7 @@ body, html {
 .clock .split-line {
     height: 10px;
     width: 100%;
-    top: -175px;
+    top: -140px;
     position: relative;
     background-color: rgb(25, 25, 25);
 }
@@ -121,20 +121,20 @@ body, html {
     width: 100%;
     text-align: center;
     margin-top: 50px;
-    padding: 0px 50px;
+    padding: 0px 25px;
 }
 
 .app {
-    width: 90px;
+    width: 80px;
     height: 130px;
     display: inline-block;
-    margin: 10px 15px;
+    margin: 8px 15px;
 }
 
 .app .app-icon {
     display: block;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 25px;
 
     -webkit-filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7)); 
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));

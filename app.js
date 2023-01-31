@@ -12,7 +12,11 @@ $(function(){
           app_name.text(v.name)
 
           app.click(function() {
-            window.open("https://www.youtube.com/redirect?q=" + v.link)  
+            if (v.jump) {
+              window.open("https://www.youtube.com/redirect?q=" + v.link)  
+            } else {
+              window.open(v.link)
+            }
           })
         })
       })

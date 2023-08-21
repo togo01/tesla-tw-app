@@ -9,6 +9,10 @@
     <script data-consolejs-channel="4c658565-2375-2394-f59a-2ff0d85fe08b"
         src="https://remotejs.com/agent/agent.js"></script>
     <script>
+
+
+        $("#apis").append("<p>" + navigator.userAgent + "</p>")
+
         for (const key in navigator) {
             $("#apis").append("<p>" + key + ":" + typeof (navigator[key]) + " = " + navigator[key] + "</p>")
             if (typeof (navigator[key]) != "string") {

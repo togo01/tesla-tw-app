@@ -1,5 +1,18 @@
 $(function(){
-    if (navigator.userAgent.includes("Tesla") || window.location.hostname == "localhost") {
+
+    var knowsUserAgents = {"2023.26.8": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.126 Safari/537.36"};
+
+    function getTeslaVersion() {
+      var userAgent = navigator.userAgent;
+      for (var version in knowsUserAgents) {
+        if (userAgent.includes(knowsUserAgents[version])) {
+          return version;
+        }
+      }
+      return "Unknown";
+    }
+
+    if (getTeslaVersion() != "Unknown" || navigator.userAgent.includes("Tesla") || window.location.hostname == "localhost") {
 
       $(".pc").remove();
 

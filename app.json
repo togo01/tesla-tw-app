@@ -1,5 +1,6 @@
 {
     "apps": [
+        { "name": "Google", "icon_url": "img/google.png", "link": "https://www.google.com", "jump": true },
         { "name": "Youtube", "icon_url": "img/youtube.png", "link": "https://www.youtube.com/new", "jump": false },
         { "name": "Netflix", "icon_url": "img/netflix.png", "link": "https://www.netflix.com/tw/", "jump": false },
         { "name": "Disney+", "icon_url": "img/disney_plus.png", "link": "https://www.disneyplus.com/zh-hant/home", "jump": false },

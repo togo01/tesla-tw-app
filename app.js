@@ -1,25 +1,28 @@
 $(function(){
 
-    var knowsUserAgents = {
-      "2023.26.8": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.126 Safari/537.36",
-      "2023.38.6": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.198 Safari/537.36",
-      "2024.14.8": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.224 Safari/537.36",
-      "2024.38.2": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.99 Safari/537.36",
-      "2025.20.8": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.92 Safari/537.36",
-      "2026.8.3": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.7339.207 Safari/537.36",
-    };
-
-    function getTeslaVersion() {
+    function isTeslaBrowser() {
       var userAgent = navigator.userAgent;
-      for (var version in knowsUserAgents) {
-        if (userAgent.includes(knowsUserAgents[version])) {
-          return version;
-        }
+      if (/Tesla/i.test(userAgent)) {
+        return true;
       }
-      return "Unknown";
+
+      var match = userAgent.match(
+        /^Mozilla\/5\.0 \(X11; Linux x86_64\) AppleWebKit\/(\d+)\.(\d+) \(KHTML, like Gecko\) Chrome\/(\d+)\.\d+\.\d+\.\d+ Safari\/\d+\.\d+$/
+      );
+      if (!match) {
+        return false;
+      }
+
+      var webkitMajor = Number(match[1]);
+      var webkitMinor = Number(match[2]);
+      var chromeMajor = Number(match[3]);
+      var webkitSupported = webkitMajor > 537 ||
+        (webkitMajor === 537 && webkitMinor >= 36);
+
+      return webkitSupported && chromeMajor >= 113;
     }
 
-    if (getTeslaVersion() != "Unknown" || navigator.userAgent.includes("Tesla") || window.location.hostname == "localhost") {
+    if (isTeslaBrowser() || window.location.hostname === "localhost") {
 
       $(".pc").remove();
 
@@ -56,5 +59,4 @@ $(function(){
     }
 
 })
-
 
